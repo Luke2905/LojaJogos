@@ -10,8 +10,19 @@ namespace LojaJogos
     {
         public string nome;
         public string tipo;
-        public string peso;
         public string marca;
         public string console;
+        public double preco;
+
+        public void ListaAcessorios()
+        {
+            Console.WriteLine("-------x-------");
+            Console.WriteLine("Nome: " + nome);
+            Console.WriteLine("Tipo: " + tipo);
+            Console.WriteLine("Marca " + marca);
+            Console.WriteLine("Console: " + console);
+            Console.WriteLine("Preço: R$" + preco);
+            Console.ReadKey();
+        }
     }
 }
