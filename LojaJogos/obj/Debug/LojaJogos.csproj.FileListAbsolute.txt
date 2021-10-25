@@ -1,0 +1,6 @@
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\bin\Debug\LojaJogos.exe.config
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\bin\Debug\LojaJogos.exe
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\bin\Debug\LojaJogos.pdb
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\obj\Debug\LojaJogos.csprojResolveAssemblyReference.cache
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\obj\Debug\LojaJogos.exe
+c:\users\lucas\onedrive\documentos\visual studio 2015\Projects\LojaJogos\LojaJogos\obj\Debug\LojaJogos.pdb
