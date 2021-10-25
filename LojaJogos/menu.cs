@@ -26,10 +26,12 @@ namespace LojaJogos
 
         public string menuCliente()
         {
-
-            Console.WriteLine("-------x-------");
+            Console.WriteLine("Game Store, seja bem vindo");
+            Console.WriteLine("Cliente");
+            Console.WriteLine("----------x---------");
             Console.WriteLine("1 - Ver Jogos");
             Console.WriteLine("2 - Ver Consoles");
+            Console.WriteLine("3 - Ver Acessórios");
             Console.WriteLine("5 - Menu Principal");
             Console.WriteLine("6 - Sair");
             Console.WriteLine("Escolha uma opção:");
@@ -40,7 +42,9 @@ namespace LojaJogos
         public string menuVendedor()
         {
 
-            Console.WriteLine("-------x-------");
+            Console.WriteLine("Game Store, seja bem vindo");
+            Console.WriteLine("Vendedor");
+            Console.WriteLine("----------x---------");
             Console.WriteLine("0 - Ver Clientes");
             Console.WriteLine("1 - Cadastrar Jogos");
             Console.WriteLine("2 - Cadartrar Consoles");

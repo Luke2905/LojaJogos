@@ -42,6 +42,15 @@ namespace LojaJogos
             console[0].marca = "Microsoft";
             //----------------FIM---------------------
 
+            //------------Metodo Acessorios-------------
+            Acessorios[] acessorio = new Acessorios[2];
+
+            acessorio[0] = new Acessorios();
+            acessorio[0].nome = "Fone de Ouvido";
+            acessorio[0].marca = "sony";
+            acessorio[0].console = "playstation";
+            acessorio[0].preco = 150.00;
+            //----------------FIM---------------------
 
             //---------------Metodo Cliente---------------
             Clientes[] cadastro = new Clientes[2];
@@ -81,6 +90,16 @@ namespace LojaJogos
                                 for (i = 0; i < 2; i++)
                                 {
                                     console[i].ListaConsoles();
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                opcao = menu.menu();
+                                break;
+                            case "3":
+                                Console.WriteLine("Lista de Acessórios");
+                                for (i = 0; i < 2; i++)
+                                {
+                                    acessorio[i].ListaAcessorios();
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
@@ -165,6 +184,35 @@ namespace LojaJogos
 
                             //----------------------CADASTRO ACESSORIOS----------------------
                             case "3":
+                                Console.WriteLine("     Tela de Cadastro de Acessórios");
+                                for (i = 0; i < 2; i++)
+                                {
+                                    acessorio[i] = new Acessorios();
+                                }
+                                for (i = 0; i < 2; i++)
+                                {
+                                    Console.WriteLine("Digite o nome do Acessório:");
+                                    acessorio[i].nome = Console.ReadLine();
+                                    Console.WriteLine("Marca do Acessório:");
+                                    acessorio[i].marca = Console.ReadLine();
+                                    Console.WriteLine("Preço");
+                                    valorstring = Console.ReadLine();
+                                    acessorio[i].preco = double.Parse(valorstring);
+                                    Console.WriteLine("O acessório é de algum console: [S/N]");
+                                    opcao = Console.ReadLine();
+                                    if(opcao == "S")
+                                    {
+                                        Console.WriteLine("Informe o Console a qual o acessorio pertençe");
+                                        acessorio[i].console = Console.ReadLine();
+                                    }
+                                    else
+                                    {
+                                        acessorio[i].console = "Acessório não faz parte de nunhum console";
+                                    }
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                opcao = menuven.menuVendedor();
                                 break;
                             //----------------------FIM----------------------
 
