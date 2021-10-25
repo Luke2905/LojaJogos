@@ -30,6 +30,19 @@ namespace LojaJogos
             jogo[0].preco = 250.00;
             //---------------FIM---------------
 
+
+            //------------Metodo Consoles-------------
+            Consoles[] console = new Consoles[2];
+
+            console[0] = new Consoles();
+            console[0].nome = "Xbox";
+            console[0].tamanho_memoria = 250;
+            console[0].preço = 5000.00;
+            console[0].tipo = "Console de Mesa";
+            console[0].marca = "Microsoft";
+            //----------------FIM---------------------
+
+
             //---------------Metodo Cliente---------------
             Clientes[] cadastro = new Clientes[2];
 
@@ -63,6 +76,16 @@ namespace LojaJogos
                                 Console.Clear();
                                 opcao = menu.menu();
                                 break;
+                            case "2":
+                                Console.WriteLine("Lista de Consoles");
+                                for (i = 0; i < 2; i++)
+                                {
+                                    console[i].ListaConsoles();
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                opcao = menu.menu();
+                                break;
                         }
                         break;
                     //----------------------FiM CLIENTE----------------------
@@ -82,6 +105,7 @@ namespace LojaJogos
                                 Console.Clear();
                               opcao = menuven.menuVendedor();
                                 break;
+                            //----------------------CADASTRO JOGOS----------------------
                             case "1":
                                 Console.WriteLine("     Tela de Cadastro de Jogos");
                                 for (i = 0; i < 2; i++)
@@ -103,16 +127,48 @@ namespace LojaJogos
                                     jogo[i].estudio = Console.ReadLine();
                                     Console.WriteLine("Preço");
                                     valorstring = Console.ReadLine();
-                                    jogo[i].preco = double.Parse(valorstring); ;
+                                    jogo[i].preco = double.Parse(valorstring); 
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
                                 opcao = menuven.menuVendedor();
                                 break;
+                            //----------------------FIM----------------------
+
+                            //----------------------CADASTRO CONSOLES----------------------
                             case "2":
+                                Console.WriteLine("     Tela de Cadastro de Consoles");
+                                for (i = 0; i < 2; i++)
+                                {
+                                    console[i] = new Consoles();
+                                }
+                                for (i = 0; i < 2; i++)
+                                {
+                                    Console.WriteLine("Digite o nome do console:");
+                                    console[i].nome = Console.ReadLine();
+                                    Console.WriteLine("Memoria Intena do Console:");
+                                    valorstring = Console.ReadLine();
+                                    console[i].tamanho_memoria = int.Parse(valorstring);
+                                    Console.WriteLine("Preço");
+                                    valorstring = Console.ReadLine();
+                                    console[i].preço = double.Parse(valorstring);
+                                    Console.WriteLine("Informe o tipo do console (de mesa ou portatil): ");
+                                    console[i].marca = Console.ReadLine();
+                                    Console.WriteLine("Informe a marca do console:");
+                                    console[i].marca = Console.ReadLine();
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                opcao = menuven.menuVendedor();
                                 break;
+                            //----------------------FIM----------------------
+
+                            //----------------------CADASTRO ACESSORIOS----------------------
                             case "3":
                                 break;
+                            //----------------------FIM----------------------
+
+                            //----------------------CADASTRO CLIENTES----------------------
                             case "4":
                                 Console.WriteLine("     Tela de Cadastro de Clientes");
                                 for (i = 0; i < 2; i++)
@@ -146,6 +202,7 @@ namespace LojaJogos
                                 Console.Clear();
                                 opcao = menuven.menuVendedor();
                                 break;
+                             //----------------------FIM----------------------
                         }
                         break;
                     //----------------------FiM VENDEDOR----------------------
