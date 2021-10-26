@@ -122,7 +122,7 @@ namespace LojaJogos
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
-                              opcao = menuven.menuVendedor();
+                                opcao = menuven.menuVendedor();
                                 break;
                             //----------------------CADASTRO JOGOS----------------------
                             case "1":
@@ -267,6 +267,7 @@ namespace LojaJogos
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
+                                opcao = menu.menu();
                                 break;
                             //----------------------FIM----------------------
 
@@ -286,6 +287,7 @@ namespace LojaJogos
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
+                                opcao = menu.menu();
                                 break;
                             //----------------------FIM----------------------
 
@@ -305,6 +307,7 @@ namespace LojaJogos
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
+                                opcao = menu.menu();
                                 break;
                             //----------------------FIM---------------------- 
 
@@ -324,12 +327,7 @@ namespace LojaJogos
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
-                                break;
-                            default:
-                                Console.WriteLine("Nenhum dado alterado");
-                                Console.ReadKey();
-                                Console.Clear();
-                                opcao = menuven.menuVendedor();
+                                opcao = menu.menu();
                                 break;
                                 //----------------------FIM----------------------
                         }
