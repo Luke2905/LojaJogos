@@ -25,5 +25,29 @@ namespace LojaJogos
             Console.WriteLine("Endereço: " + endereco);
             Console.WriteLine("email: " + email);
         }
+
+        public void AlterarClientes()
+        {
+            string valorstring;
+
+            Console.WriteLine("Digite o nome do Cliente:");
+            nome = Console.ReadLine();
+            Console.WriteLine("Informe o CPF do Cliente");
+            cpf = Console.ReadLine();
+            Console.WriteLine("Informe a data de Nascimento do Cliente:");
+            Console.WriteLine("Dia:");
+            valorstring = Console.ReadLine();
+            dia = int.Parse(valorstring);
+            Console.WriteLine("Mês:");
+            valorstring = Console.ReadLine();
+            mes = int.Parse(valorstring);
+            Console.WriteLine("Ano:");
+            valorstring = Console.ReadLine();
+            ano = int.Parse(valorstring);
+            Console.WriteLine("Digite o Endereço do Clinete:");
+            endereco = Console.ReadLine();
+            Console.WriteLine("Informe o email do clinete:");
+            email = Console.ReadLine();
+        }
     }
 }

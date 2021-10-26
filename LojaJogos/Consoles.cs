@@ -25,5 +25,23 @@ namespace LojaJogos
             Console.WriteLine("Marca " + marca);
             Console.ReadKey();
         }
+
+        public void AlterarConsoles()
+        {
+            string valorstring;
+
+            Console.WriteLine("Digite o nome do console:");
+            nome = Console.ReadLine();
+            Console.WriteLine("Memoria Interna do Console:");
+            valorstring = Console.ReadLine();
+            tamanho_memoria = int.Parse(valorstring);
+            Console.WriteLine("Preço");
+            valorstring = Console.ReadLine();
+            preço = double.Parse(valorstring);
+            Console.WriteLine("Informe o tipo do console (de mesa ou portatil): ");
+            tipo = Console.ReadLine();
+            Console.WriteLine("Informe a marca do console:");
+            marca = Console.ReadLine();
+        }
     }
 }

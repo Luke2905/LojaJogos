@@ -50,6 +50,12 @@ namespace LojaJogos
             Console.WriteLine("2 - Cadartrar Consoles");
             Console.WriteLine("3 - Cadastrar Acessorios");
             Console.WriteLine("4 - Cadastrar Cliente");
+            Console.WriteLine("------------Alterar Dados------------");
+            Console.WriteLine("1.1 - Alterar dados Jogos");
+            Console.WriteLine("2.1 - Alterar dados Consoles");
+            Console.WriteLine("3.1 - Alterar dados Acessorios");
+            Console.WriteLine("4.1 - Alterar dados Clientes");
+            Console.WriteLine("------------------X------------------");
             Console.WriteLine("5 - Menu Principal");
             Console.WriteLine("6 - Sair");
             Console.WriteLine("Escolha uma opção:");

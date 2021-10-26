@@ -165,7 +165,7 @@ namespace LojaJogos
                                 {
                                     Console.WriteLine("Digite o nome do console:");
                                     console[i].nome = Console.ReadLine();
-                                    Console.WriteLine("Memoria Intena do Console:");
+                                    Console.WriteLine("Memoria Interna do Console:");
                                     valorstring = Console.ReadLine();
                                     console[i].tamanho_memoria = int.Parse(valorstring);
                                     Console.WriteLine("Preço");
@@ -227,7 +227,7 @@ namespace LojaJogos
                                 {
 
 
-                                    Console.WriteLine("Digite o nome do paciente:");
+                                    Console.WriteLine("Digite o nome do Cliente:");
                                     cadastro[i].nome = Console.ReadLine();
                                     Console.WriteLine("Informe o CPF do Cliente");
                                     cadastro[i].cpf = Console.ReadLine();
@@ -253,6 +253,86 @@ namespace LojaJogos
                              //----------------------FIM----------------------
                         }
                         break;
+
+                    //----------------------ALTERAÇÃO DADOS JOGOS----------------------
+                    case "1.1":
+                        Console.WriteLine("Menu de Alteração de Dados dos Jogos");
+                        Console.WriteLine("Informe o Numero do Jogo - 0, 1");
+                        opcao = Console.ReadLine();
+                        switch (opcao)
+                        {
+                            case "0":
+                                jogo[0].AlterarJogos();
+                                break;
+                            case "1":
+                                jogo[1].AlterarJogos();
+                                break;
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        opcao = menuven.menuVendedor();
+                        break;
+                    //----------------------FIM----------------------
+
+                    //----------------------ALTERAÇÃO DADOS CONSOLES----------------------
+                    case "2.1":
+                        Console.WriteLine("Menu de Alteração de Dados dos Consoles");
+                        Console.WriteLine("Informe o Numero do Console - 0, 1");
+                        opcao = Console.ReadLine();
+                        switch (opcao)
+                        {
+                            case "0":
+                                console[0].AlterarConsoles();
+                                break;
+                            case "1":
+                                console[1].AlterarConsoles();
+                                break;
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        opcao = menuven.menuVendedor();
+                        break;
+                    //----------------------FIM----------------------
+
+                    //----------------------ALTERAÇÃO DADOS ACESSORIOS---------------------
+                    case "3.1":
+                        Console.WriteLine("Menu de Alteração de Dados dos Acessorios");
+                        Console.WriteLine("Informe o Numero do Acessorio - 0, 1");
+                        opcao = Console.ReadLine();
+                        switch (opcao)
+                        {
+                            case "0":
+                                acessorio[0].AlterarAcessorios();
+                                break;
+                            case "1":
+                                acessorio[1].AlterarAcessorios();
+                                break;
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        opcao = menuven.menuVendedor();
+                        break;
+                    //----------------------FIM----------------------                    //----------------------ALTERAÇÃO DADOS CLIENTES----------------------
+                    case "4.1":
+                        Console.WriteLine("Menu de Alteração de Dados dos Clienetes");
+                        Console.WriteLine("Informe o Numero do Clientes - 0, 1");
+                        opcao = Console.ReadLine();
+                        switch (opcao)
+                        {
+                            case "0":
+                                cadastro[0].AlterarClientes();
+                                break;
+                            case "1":
+                                cadastro[1].AlterarClientes();
+                                break;
+                        }
+                        Console.ReadKey();
+                        Console.Clear();
+                        opcao = menuven.menuVendedor();
+                        break;
+                    //----------------------FIM----------------------
+
+
                     //----------------------FiM VENDEDOR----------------------
 
                     case "5":

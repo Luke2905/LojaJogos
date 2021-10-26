@@ -15,6 +15,7 @@ namespace LojaJogos
         public string tamanho;
         public string estudio;
 
+
         public void ListaJogos()
         {
             Console.WriteLine("-------x-------");
@@ -24,8 +25,27 @@ namespace LojaJogos
             Console.WriteLine("Tamanho do Jogo: " + tamanho);
             Console.WriteLine("Preço: R$ " + preco);
             Console.WriteLine("Estudio: " + estudio);
-            Console.ReadKey();
         }
 
+        public void AlterarJogos()
+        {
+            string valorstring;
+
+            Console.WriteLine("Digite o nome do jogo:");
+            nome = Console.ReadLine();
+            Console.WriteLine("Informe o genero do jogo::");
+            genero = Console.ReadLine();
+            Console.WriteLine("Quanto espaco de memoria o jogo ocupa");
+            tamanho = Console.ReadLine();
+            Console.WriteLine("Infome a faixa etaria:");
+            valorstring = Console.ReadLine();
+            faixa_etaria = int.Parse(valorstring);
+            Console.WriteLine("Informe o estudio que desenvolvel o jogo: ");
+            estudio = Console.ReadLine();
+            Console.WriteLine("Preço");
+            valorstring = Console.ReadLine();
+            preco = double.Parse(valorstring);
+
+            }
     }
 }
