@@ -25,7 +25,7 @@ namespace LojaJogos
             jogo[0] = new Jogos();
             jogo[0].nome = "GTA";
             jogo[0].genero = "Sandbox";
-            jogo[0].faixa_etaria = 18;
+            jogo[0].faixa_etaria = "18";
             jogo[0].estudio = "Rockstar Games";
             jogo[0].preco = 250.00;
             //---------------FIM---------------
@@ -71,7 +71,7 @@ namespace LojaJogos
                 switch (opcao)
                 {
                     //----------------------Menu Clientes----------------------
-                    case "1":
+                    case "C":
                         opcao = menucli.menuCliente();
                         switch (opcao)
                         {
@@ -110,7 +110,7 @@ namespace LojaJogos
                     //----------------------FiM CLIENTE----------------------
 
                     //----------------------MENU VENDEDOR----------------------
-                    case "2":
+                    case "V":
                         opcao = menuven.menuVendedor();
                         switch (opcao)
                         {
@@ -135,13 +135,12 @@ namespace LojaJogos
                                 {
                                     Console.WriteLine("Digite o nome do jogo:");
                                     jogo[i].nome = Console.ReadLine();
-                                    Console.WriteLine("Informe o genero do jogo::");
+                                    Console.WriteLine("Informe o genero do jogo:");
                                     jogo[i].genero = Console.ReadLine();
-                                    Console.WriteLine("Quanto espaco de memoria o jogo ocupa");
+                                    Console.WriteLine("Quanto espaco de memoria o jogo ocupa:");
                                     jogo[i].tamanho = Console.ReadLine();
                                     Console.WriteLine("Infome a faixa etaria:");
-                                    valorstring = Console.ReadLine();
-                                    jogo[i].faixa_etaria = int.Parse(valorstring);
+                                    jogo[i].faixa_etaria = Console.ReadLine();
                                     Console.WriteLine("Informe o estudio que desenvolvel o jogo: ");
                                     jogo[i].estudio = Console.ReadLine();
                                     Console.WriteLine("Preço");
@@ -200,7 +199,7 @@ namespace LojaJogos
                                     acessorio[i].preco = double.Parse(valorstring);
                                     Console.WriteLine("O acessório é de algum console: [S/N]");
                                     opcao = Console.ReadLine();
-                                    if(opcao == "S")
+                                    if (opcao == "S")
                                     {
                                         Console.WriteLine("Informe o Console a qual o acessorio pertençe");
                                         acessorio[i].console = Console.ReadLine();
@@ -241,98 +240,100 @@ namespace LojaJogos
                                     Console.WriteLine("Ano:");
                                     valorstring = Console.ReadLine();
                                     cadastro[i].ano = int.Parse(valorstring);
-                                    Console.WriteLine("Digite o Endereço do Clinete:");
+                                    Console.WriteLine("Digite o Endereço do Cliente:");
                                     cadastro[i].endereco = Console.ReadLine();
-                                    Console.WriteLine("Informe o email do clinete:");
+                                    Console.WriteLine("Informe o email do cliente:");
                                     cadastro[i].email = Console.ReadLine();
                                 }
                                 Console.ReadKey();
                                 Console.Clear();
                                 opcao = menuven.menuVendedor();
                                 break;
-                             //----------------------FIM----------------------
+                            //----------------------FIM----------------------
+
+                            //----------------------ALTERAÇÃO DADOS JOGOS----------------------
+                            case "1.1":
+                                Console.WriteLine("Menu de Alteração de Dados dos Jogos");
+                                Console.WriteLine("Informe o Numero do Jogo - 0, 1");
+                                opcao = Console.ReadLine();
+                                switch (opcao)
+                                {
+                                    case "0":
+                                        jogo[0].AlterarJogos();
+                                        break;
+                                    case "1":
+                                        jogo[1].AlterarJogos();
+                                        break;
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
+                            //----------------------FIM----------------------
+
+                            //----------------------ALTERAÇÃO DADOS CONSOLES----------------------
+                            case "2.1":
+                                Console.WriteLine("Menu de Alteração de Dados dos Consoles");
+                                Console.WriteLine("Informe o Numero do Console - 0, 1");
+                                opcao = Console.ReadLine();
+                                switch (opcao)
+                                {
+                                    case "0":
+                                        console[0].AlterarConsoles();
+                                        break;
+                                    case "1":
+                                        console[1].AlterarConsoles();
+                                        break;
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
+                            //----------------------FIM----------------------
+
+                            //----------------------ALTERAÇÃO DADOS ACESSORIOS---------------------
+                            case "3.1":
+                                Console.WriteLine("Menu de Alteração de Dados dos Acessorios");
+                                Console.WriteLine("Informe o Numero do Acessorio - 0, 1");
+                                opcao = Console.ReadLine();
+                                switch (opcao)
+                                {
+                                    case "0":
+                                        acessorio[0].AlterarAcessorios();
+                                        break;
+                                    case "1":
+                                        acessorio[1].AlterarAcessorios();
+                                        break;
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
+                            //----------------------FIM---------------------- 
+
+                            //----------------------ALTERAÇÃO DADOS CLIENTES----------------------
+                            case "4.1":
+                                Console.WriteLine("Menu de Alteração de Dados dos Clienetes");
+                                Console.WriteLine("Informe o Numero do Clientes - 0, 1");
+                                opcao = Console.ReadLine();
+                                switch (opcao)
+                                {
+                                    case "0":
+                                        cadastro[0].AlterarClientes();
+                                        break;
+                                    case "1":
+                                        cadastro[1].AlterarClientes();
+                                        break;
+                                }
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
+                            default:
+                                Console.WriteLine("Nenhum dado alterado");
+                                Console.ReadKey();
+                                Console.Clear();
+                                opcao = menuven.menuVendedor();
+                                break;
+                                //----------------------FIM----------------------
                         }
                         break;
-
-                    //----------------------ALTERAÇÃO DADOS JOGOS----------------------
-                    case "1.1":
-                        Console.WriteLine("Menu de Alteração de Dados dos Jogos");
-                        Console.WriteLine("Informe o Numero do Jogo - 0, 1");
-                        opcao = Console.ReadLine();
-                        switch (opcao)
-                        {
-                            case "0":
-                                jogo[0].AlterarJogos();
-                                break;
-                            case "1":
-                                jogo[1].AlterarJogos();
-                                break;
-                        }
-                        Console.ReadKey();
-                        Console.Clear();
-                        opcao = menuven.menuVendedor();
-                        break;
-                    //----------------------FIM----------------------
-
-                    //----------------------ALTERAÇÃO DADOS CONSOLES----------------------
-                    case "2.1":
-                        Console.WriteLine("Menu de Alteração de Dados dos Consoles");
-                        Console.WriteLine("Informe o Numero do Console - 0, 1");
-                        opcao = Console.ReadLine();
-                        switch (opcao)
-                        {
-                            case "0":
-                                console[0].AlterarConsoles();
-                                break;
-                            case "1":
-                                console[1].AlterarConsoles();
-                                break;
-                        }
-                        Console.ReadKey();
-                        Console.Clear();
-                        opcao = menuven.menuVendedor();
-                        break;
-                    //----------------------FIM----------------------
-
-                    //----------------------ALTERAÇÃO DADOS ACESSORIOS---------------------
-                    case "3.1":
-                        Console.WriteLine("Menu de Alteração de Dados dos Acessorios");
-                        Console.WriteLine("Informe o Numero do Acessorio - 0, 1");
-                        opcao = Console.ReadLine();
-                        switch (opcao)
-                        {
-                            case "0":
-                                acessorio[0].AlterarAcessorios();
-                                break;
-                            case "1":
-                                acessorio[1].AlterarAcessorios();
-                                break;
-                        }
-                        Console.ReadKey();
-                        Console.Clear();
-                        opcao = menuven.menuVendedor();
-                        break;
-                    //----------------------FIM----------------------                    //----------------------ALTERAÇÃO DADOS CLIENTES----------------------
-                    case "4.1":
-                        Console.WriteLine("Menu de Alteração de Dados dos Clienetes");
-                        Console.WriteLine("Informe o Numero do Clientes - 0, 1");
-                        opcao = Console.ReadLine();
-                        switch (opcao)
-                        {
-                            case "0":
-                                cadastro[0].AlterarClientes();
-                                break;
-                            case "1":
-                                cadastro[1].AlterarClientes();
-                                break;
-                        }
-                        Console.ReadKey();
-                        Console.Clear();
-                        opcao = menuven.menuVendedor();
-                        break;
-                    //----------------------FIM----------------------
-
-
                     //----------------------FiM VENDEDOR----------------------
 
                     case "5":
@@ -350,6 +351,7 @@ namespace LojaJogos
             } while (opcao != "6");
             Console.WriteLine("Fechando programa...");
             Console.ReadKey();
+
 
         }
     }

@@ -10,7 +10,7 @@ namespace LojaJogos
     {
         public string nome;
         public string genero;
-        public int faixa_etaria;
+        public string faixa_etaria;
         public double preco;
         public string tamanho;
         public string estudio;
@@ -33,13 +33,12 @@ namespace LojaJogos
 
             Console.WriteLine("Digite o nome do jogo:");
             nome = Console.ReadLine();
-            Console.WriteLine("Informe o genero do jogo::");
+            Console.WriteLine("Informe o genero do jogo:");
             genero = Console.ReadLine();
             Console.WriteLine("Quanto espaco de memoria o jogo ocupa");
             tamanho = Console.ReadLine();
             Console.WriteLine("Infome a faixa etaria:");
-            valorstring = Console.ReadLine();
-            faixa_etaria = int.Parse(valorstring);
+            faixa_etaria = Console.ReadLine();
             Console.WriteLine("Informe o estudio que desenvolvel o jogo: ");
             estudio = Console.ReadLine();
             Console.WriteLine("Preço");

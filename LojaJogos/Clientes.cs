@@ -44,9 +44,9 @@ namespace LojaJogos
             Console.WriteLine("Ano:");
             valorstring = Console.ReadLine();
             ano = int.Parse(valorstring);
-            Console.WriteLine("Digite o Endereço do Clinete:");
+            Console.WriteLine("Digite o Endereço do Cliente:");
             endereco = Console.ReadLine();
-            Console.WriteLine("Informe o email do clinete:");
+            Console.WriteLine("Informe o email do cliente:");
             email = Console.ReadLine();
         }
     }

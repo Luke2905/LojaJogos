@@ -15,8 +15,8 @@ namespace LojaJogos
 
             Console.WriteLine("Game Store");
             Console.WriteLine("Acessar a Loja como:");
-            Console.WriteLine("1 - Cliente");
-            Console.WriteLine("2 - Vendedor");
+            Console.WriteLine("C - Cliente");
+            Console.WriteLine("V - Vendedor");
             Console.WriteLine("6 - Sair");
             Console.WriteLine("-------x-------");
             Console.WriteLine("Escolha uma opção:");
