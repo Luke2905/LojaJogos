@@ -28,7 +28,7 @@ namespace LojaJogos
         {
 
             Console.WriteLine("Game Store, seja bem vindo");
-            Console.WriteLine("Vendedor");
+            Console.WriteLine("Menu Cadastros");
             Console.WriteLine("----------x---------");
             Console.WriteLine("0 - Ver Clientes");
             Console.WriteLine("1 - Cadastrar Jogos");

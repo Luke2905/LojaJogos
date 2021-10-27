@@ -19,7 +19,7 @@ namespace LojaJogos
             //----------Metodo Jogos-----------------
             int i;
             string valorstring;
-            Jogos[] jogo = new Jogos [2];
+            Jogos[] jogo = new Jogos [4];
 
             jogo[0] = new Jogos();
             jogo[0].nome = "GTA";
@@ -31,7 +31,7 @@ namespace LojaJogos
 
 
             //------------Metodo Consoles-------------
-            Consoles[] console = new Consoles[2];
+            Consoles[] console = new Consoles[4];
 
             console[0] = new Consoles();
             console[0].nome = "Xbox";
@@ -42,7 +42,7 @@ namespace LojaJogos
             //----------------FIM---------------------
 
             //------------Metodo Acessorios-------------
-            Acessorios[] acessorio = new Acessorios[2];
+            Acessorios[] acessorio = new Acessorios[4];
 
             acessorio[0] = new Acessorios();
             acessorio[0].nome = "Fone de Ouvido";
@@ -52,7 +52,7 @@ namespace LojaJogos
             //----------------FIM---------------------
 
             //---------------Metodo Cliente---------------
-            Clientes[] cadastro = new Clientes[2];
+            Clientes[] cadastro = new Clientes[4];
 
             cadastro[0] = new Clientes();
             cadastro[0].nome = "Lucas";
@@ -72,7 +72,7 @@ namespace LojaJogos
                     //----------------------Menu Clientes----------------------
                             case "1":
                                 Console.WriteLine("Lista de Jogos");
-                                for (i = 0; i < 2; i++)
+                                for (i = 0; i < 4; i++)
                                 {
                                     jogo[i].ListaJogos();
                                 }
@@ -82,7 +82,7 @@ namespace LojaJogos
                                 break;
                             case "2":
                                 Console.WriteLine("Lista de Consoles");
-                                for (i = 0; i < 2; i++)
+                                for (i = 0; i < 4; i++)
                                 {
                                     console[i].ListaConsoles();
                                 }
@@ -92,7 +92,7 @@ namespace LojaJogos
                                 break;
                             case "3":
                                 Console.WriteLine("Lista de Acessórios");
-                                for (i = 0; i < 2; i++)
+                                for (i = 0; i < 4; i++)
                                 {
                                     acessorio[i].ListaAcessorios();
                                 }
@@ -107,7 +107,7 @@ namespace LojaJogos
                         opcao = menuven.menuVendedor();
                         if(opcao == "0") {
                             Console.WriteLine("Lista de Clientes");
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 cadastro[i].ListaDados();
                             }
@@ -119,11 +119,11 @@ namespace LojaJogos
                         if (opcao == "1")
                         {
                             Console.WriteLine("     Tela de Cadastro de Jogos");
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 jogo[i] = new Jogos();
                             }
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 Console.WriteLine("Digite o nome do jogo:");
                                 jogo[i].nome = Console.ReadLine();
@@ -146,11 +146,11 @@ namespace LojaJogos
                         }if(opcao == "2") {
                             //----------------------CADASTRO CONSOLES----------------------
                             Console.WriteLine("     Tela de Cadastro de Consoles");
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 console[i] = new Consoles();
                             }
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 Console.WriteLine("Digite o nome do console:");
                                 console[i].nome = Console.ReadLine();
@@ -173,11 +173,11 @@ namespace LojaJogos
                         {
                             //----------------------CADASTRO ACESSORIOS----------------------
                             Console.WriteLine("     Tela de Cadastro de Acessórios");
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 acessorio[i] = new Acessorios();
                             }
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 Console.WriteLine("Digite o nome do Acessório:");
                                 acessorio[i].nome = Console.ReadLine();
@@ -207,11 +207,11 @@ namespace LojaJogos
                             //----------------------CADASTRO CLIENTES----------------------
 
                             Console.WriteLine("     Tela de Cadastro de Clientes");
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
                                 cadastro[i] = new Clientes();
                             }
-                            for (i = 0; i < 2; i++)
+                            for (i = 0; i < 4; i++)
                             {
 
 
@@ -242,7 +242,7 @@ namespace LojaJogos
                         {
                             //----------------------ALTERAÇÃO DADOS JOGOS----------------------
                             Console.WriteLine("Menu de Alteração de Dados dos Jogos");
-                            Console.WriteLine("Informe o Numero do Jogo - 0, 1");
+                            Console.WriteLine("Informe o Numero do Jogo - 0, 1, 2, 3");
                             opcao = Console.ReadLine();
                             switch (opcao)
                             {
@@ -251,6 +251,12 @@ namespace LojaJogos
                                     break;
                                 case "1":
                                     jogo[1].AlterarJogos();
+                                    break;
+                                case "2":
+                                    jogo[2].AlterarJogos();
+                                    break;
+                                case "3":
+                                    jogo[3].AlterarJogos();
                                     break;
                             }
                             Console.ReadKey();
@@ -261,7 +267,7 @@ namespace LojaJogos
                         {
                             //----------------------ALTERAÇÃO DADOS CONSOLES----------------------
                             Console.WriteLine("Menu de Alteração de Dados dos Consoles");
-                            Console.WriteLine("Informe o Numero do Console - 0, 1");
+                            Console.WriteLine("Informe o Numero do Console - 0, 1, 2, 3");
                             opcao = Console.ReadLine();
                             switch (opcao)
                             {
@@ -270,6 +276,12 @@ namespace LojaJogos
                                     break;
                                 case "1":
                                     console[1].AlterarConsoles();
+                                    break;
+                                case "2":
+                                    console[2].AlterarConsoles();
+                                    break;
+                                case "3":
+                                    console[3].AlterarConsoles();
                                     break;
                             }
                             Console.ReadKey();
@@ -280,7 +292,7 @@ namespace LojaJogos
                         {
                             //----------------------ALTERAÇÃO DADOS ACESSORIOS---------------------
                             Console.WriteLine("Menu de Alteração de Dados dos Acessorios");
-                            Console.WriteLine("Informe o Numero do Acessorio - 0, 1");
+                            Console.WriteLine("Informe o Numero do Acessorio - 0, 1, 2, 3");
                             opcao = Console.ReadLine();
                             switch (opcao)
                             {
@@ -289,6 +301,12 @@ namespace LojaJogos
                                     break;
                                 case "1":
                                     acessorio[1].AlterarAcessorios();
+                                    break;
+                                case "2":
+                                    acessorio[2].AlterarAcessorios();
+                                    break;
+                                case "3":
+                                    acessorio[3].AlterarAcessorios();
                                     break;
                             }
                             Console.ReadKey();
@@ -299,7 +317,7 @@ namespace LojaJogos
                         {
                             //----------------------ALTERAÇÃO DADOS CLIENTES----------------------
                             Console.WriteLine("Menu de Alteração de Dados dos Clienetes");
-                            Console.WriteLine("Informe o Numero do Clientes - 0, 1");
+                            Console.WriteLine("Informe o Numero do Clientes - 0, 1, 2, 3");
                             opcao = Console.ReadLine();
                             switch (opcao)
                             {
@@ -308,6 +326,12 @@ namespace LojaJogos
                                     break;
                                 case "1":
                                     cadastro[1].AlterarClientes();
+                                    break;
+                                case "2":
+                                    cadastro[2].AlterarClientes();
+                                    break;
+                                case "3":
+                                    cadastro[3].AlterarClientes();
                                     break;
                             }
                             Console.ReadKey();
