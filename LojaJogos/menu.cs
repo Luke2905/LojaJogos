@@ -13,32 +13,17 @@ namespace LojaJogos
         public string menu()
         {
 
-            Console.WriteLine("Game Store");
-            Console.WriteLine("Acessar a Loja como:");
-            Console.WriteLine("C - Cliente");
-            Console.WriteLine("V - Vendedor");
+            Console.WriteLine("Game Store, seja bem vindo");
+            Console.WriteLine("1 - Ver Jogos");
+            Console.WriteLine("2 - Ver Consoles");
+            Console.WriteLine("3 - Ver Acessórios");
+            Console.WriteLine("C - Cadastro");
             Console.WriteLine("6 - Sair");
             Console.WriteLine("-------x-------");
             Console.WriteLine("Escolha uma opção:");
             opcao = Console.ReadLine();
             return opcao.ToUpper();
         }
-
-        public string menuCliente()
-        {
-            Console.WriteLine("Game Store, seja bem vindo");
-            Console.WriteLine("Cliente");
-            Console.WriteLine("----------x---------");
-            Console.WriteLine("1 - Ver Jogos");
-            Console.WriteLine("2 - Ver Consoles");
-            Console.WriteLine("3 - Ver Acessórios");
-            Console.WriteLine("5 - Menu Principal");
-            Console.WriteLine("6 - Sair");
-            Console.WriteLine("Escolha uma opção:");
-            opcao = Console.ReadLine();
-            return opcao.ToUpper();
-        }
-
         public string menuVendedor()
         {
 
