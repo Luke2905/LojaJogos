@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
+
 namespace LojaJogos
 {
-    class Conexao
+    class Conexao2
     {
+
         public MySqlConnection conexao;
         public MySqlCommand cmd;
         public MySqlDataReader resultado;
 
-        public Conexao()
+        public Conexao2()
         {
             conexao = new MySqlConnection("server=localhost;database=gamestar;uid=root; password=nega2029");
             try
@@ -30,23 +32,22 @@ namespace LojaJogos
             }
         }
 
-        public void inserirJogo(JogosDB jg)
+        public void inserirConsoles(ConsolesDB cs)
         {
-            string sql = "insert into jogos (nome, genero, classificacao, preco) values (@nome,@genero,@faixa_etaria,@preco)";
+            string sql = "insert into jogos (nome, genero, preco) values (@nome,@marca,@preco)";
             cmd = new MySqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@nome", jg.nome);
-            cmd.Parameters.AddWithValue("@genero", jg.genero);
-            cmd.Parameters.AddWithValue("@faixa_etaria", jg.faixa_etaria);
-            cmd.Parameters.AddWithValue("@preco", jg.preco);
+            cmd.Parameters.AddWithValue("@nome", cs.nome);
+            cmd.Parameters.AddWithValue("@marca", cs.nome);
+            cmd.Parameters.AddWithValue("@preco", cs.preço);
             cmd.ExecuteNonQuery();
         }
 
-        public void listaJogos()
+        public void listaConsoles()
         {
-            string sql = "select *from jogos";
+            string sql = "select *from consoles";
             cmd = new MySqlCommand(sql, conexao);
             cmd.CommandText = sql;
-            if(conexao.State == ConnectionState.Open)
+            if (conexao.State == ConnectionState.Open)
             {
 
             }
@@ -60,8 +61,7 @@ namespace LojaJogos
             {
                 Console.WriteLine("-------x-------");
                 Console.WriteLine("Nome: " + resultado["nome"]);
-                Console.WriteLine("Genero: " + resultado["genero"]);
-                Console.WriteLine("Classificação Etária: " + resultado["classificacao"]);
+                Console.WriteLine("Marca: " + resultado["marca"]);
                 Console.WriteLine("Preço: R$ " + resultado["preco"]);
             }
             conexao.Close();
@@ -70,3 +70,4 @@ namespace LojaJogos
 
     }
 }
+

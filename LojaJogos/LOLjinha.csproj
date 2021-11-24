@@ -52,7 +52,9 @@
     <Compile Include="Acessorios.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="Conexao2.cs" />
     <Compile Include="Consoles.cs" />
+    <Compile Include="ConsolesDB.cs" />
     <Compile Include="Jogos.cs" />
     <Compile Include="JogosDB.cs" />
     <Compile Include="menu.cs" />
